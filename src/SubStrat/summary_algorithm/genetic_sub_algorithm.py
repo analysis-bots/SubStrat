@@ -57,7 +57,7 @@ class GeneticSubAlgorithmn(BasicSummaryAlgorithm):
 
     def __init__(self, dataset: pd.DataFrame, target_column_name: str, sub_col_size: int=None, 
                  sub_row_size: int=None, population_size: int=100, fitness: BaseFitness=None, 
-                 selection: BaseSelection=None, mutation_rate: float=0.01, num_generation=35, 
+                 selection: BaseSelection=None, mutation_rate: float=0.01, num_generation=25, 
                  population_init: BaseInitPopulationAlgorithm=None, stagnation_limit: int=25, time_limit: float=float('inf')):
         
         self.dataset = dataset

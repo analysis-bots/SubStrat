@@ -18,6 +18,21 @@ It comes integrated with functionalities from the popular `AutoSklearn` library,
 - Run another time the automl to finetune the hyper-parameters fot the specific model.
 - Returns the classifier
 
+Installing the SubStrat package
+```bash
+pip install substart-automl
+```
+## Usage
+
+```python
+from SubStrat import SubStrat
+
+# Initialize SubStrat with a dataset and target column
+s = SubStrat(dataset=my_dataset, target_col_name='target')
+# Excute SubStrat flow
+cls = s.run()
+```
+
 ## Classes
 
 ### SubStrat
@@ -57,26 +72,13 @@ Implements the genetic algorithm for dataset summarization.
 
 - `run()`: Executes the genetic algorithm and returns the best subset of the dataset.
 
-## Usage
 
-```python
-from SubStrat.SubStrat import SubStrat
-
-# Initialize SubStrat with a dataset and target column
-s = SubStrat(dataset=my_dataset, target_col_name='target')
-# Excute SubStrat flow
-cls = s.run()
-```
-# ... [More examples can be placed here]
-
-[Details on how to install the package can be added here.]
-```bash
-pip install substart-automl
-```
-
-
-# TODO: futute features
- 
+## futute features
+ - Add verbose mode.
+ - Add the option to use more AutoML frameworks, like TPOT.
+ - Make SubStrat more configable by the user.
+ - Make the UX more friendly.
+ - 
 
 # Citing information
 Teddy Lazebnik, Amit Somech, and Abraham Itzhak Weinberg. 2022. SubStrat: A Subset-Based Optimization Strategy for Faster AutoML. Proc. VLDB Endow. 16, 4 (December 2022), 772–780. https://doi.org/10.14778/3574245.3574261 
