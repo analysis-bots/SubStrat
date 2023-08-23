@@ -84,7 +84,7 @@ class GeneticSubAlgorithmn(BasicSummaryAlgorithm):
                                        mutation_rate=self.mutation_rate, population_size=self.population_size)
 
     def run(self) -> pd.DataFrame:
-        print(f"Running genetic summary algorithm with #generations: {self.num_generation}")
+        # print(f"Running genetic summary algorithm with #generations: {self.num_generation}")
 
         pop: Population = self.init_pop.init_population()
         pop.calc_gene_score()
@@ -95,13 +95,13 @@ class GeneticSubAlgorithmn(BasicSummaryAlgorithm):
 
         for _ in tqdm(range(self.num_generation)):
             if time.time() - start_time > self.time_limit:
-                print("Time limit reached. Stopping.")
+                # print("Time limit reached. Stopping.")
                 break
             current_best_score = pop.get_best_pop_gene().score
             if current_best_score <= best_score:
                 stagnation_counter += 1
                 if stagnation_counter >= self.stagnation_limit:
-                    print(f"No improvement for several generations. Stopping. score:{current_best_score}")
+                    # print(f"No improvement for several generations. Stopping. score:{current_best_score}")
                     break
             else:
                 best_score = current_best_score
@@ -110,7 +110,7 @@ class GeneticSubAlgorithmn(BasicSummaryAlgorithm):
             pop.next_generation()
 
         best_gene: Gene = pop.get_best_pop_gene()
-        print(f"Finished Genetic Algo, best gene with scoer of: {best_gene.score}, with time: {time.time() - start_time}")
+        # print(f"Finished Genetic Algo, best gene with scoer of: {best_gene.score}, with time: {time.time() - start_time}")
         sub_data = self.dataset.iloc[best_gene.gene_rows, best_gene.gene_cols]
         return sub_data
 

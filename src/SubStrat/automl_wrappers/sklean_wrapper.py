@@ -49,8 +49,8 @@ def fetch_best_model_name_from_cls(cls: AutoSklearnClassifier) -> str:
     best_model_data = leaderboard.loc[leaderboard['rank'] == 1].to_dict()
     model_id = leaderboard.loc[leaderboard['rank'] == 1].index[0]
     model_name = best_model_data['type'][model_id]
-    print(f"Model ID: {model_id}")
-    print(f"Model Name: {model_name}")
+    # print(f"Model ID: {model_id}")
+    # print(f"Model Name: {model_name}")
     
     return model_name
 

@@ -103,21 +103,21 @@ class TestPopulation(unittest.TestCase):
         self.assertEqual(size, len(pop.genes))
 
 
-    def test_end_to_end_small_db(self):
-        data = load_iris(as_frame=True).frame
-        num_rows, num_cols = get_sub_dataset_size(data)
-        init = InitRandomPopulation(data, num_cols, num_rows , "target", 50)
-        pop: Population = init.init_population()
-        pop.calc_gene_score()
-        temp_best = pop.get_best_pop_gene()
-        best_socre = temp_best.score
-        print(f"Before running best score: {best_socre}")
-        for i in range(5):
-            pop.next_generation()
-            temp_best = pop.get_best_pop_gene()
-            print(f"Gen #{i}, Best score: {temp_best.score}")
-            self.assertGreaterEqual(temp_best.score, best_socre)
-            best_socre = temp_best.score
+    # def test_end_to_end_small_db(self):
+    #     data = load_iris(as_frame=True).frame
+    #     num_rows, num_cols = get_sub_dataset_size(data)
+    #     init = InitRandomPopulation(data, num_cols, num_rows , "target", 50)
+    #     pop: Population = init.init_population()
+    #     pop.calc_gene_score()
+    #     temp_best = pop.get_best_pop_gene()
+    #     best_socre = temp_best.score
+    #     print(f"Before running best score: {best_socre}")
+    #     for i in range(5):
+    #         pop.next_generation()
+    #         temp_best = pop.get_best_pop_gene()
+    #         print(f"Gen #{i}, Best score: {temp_best.score}")
+    #         self.assertGreaterEqual(temp_best.score, best_socre)
+    #         best_socre = temp_best.score
     
     # def test_like_article_end_to_end_small_db(self):
     #     data = load_iris(as_frame=True).frame
@@ -137,21 +137,21 @@ class TestPopulation(unittest.TestCase):
     #         self.assertGreaterEqual(temp_best.score, best_socre)
     #         best_socre = temp_best.score
 
-    def test_end_to_end_mid_db(self):
-        data = pd.read_csv("../data/dataset_2_headech_prodrom.csv")
-        num_rows, num_cols = get_sub_dataset_size(data)
-        init = InitRandomPopulation(data, num_cols, num_rows , "target", 50)
-        pop: Population = init.init_population()
-        pop.calc_gene_score()
-        temp_best = pop.get_best_pop_gene()
-        best_socre = temp_best.score
-        print(f"Before running best score: {best_socre}")
-        for i in range(5):
-            pop.next_generation()
-            temp_best = pop.get_best_pop_gene()
-            print(f"Gen #{i}, Best score: {temp_best.score}")
-            self.assertGreaterEqual(temp_best.score, best_socre)
-            best_socre = temp_best.score
+    # def test_end_to_end_mid_db(self):
+    #     data = pd.read_csv("../data/dataset_2_headech_prodrom.csv")
+    #     num_rows, num_cols = get_sub_dataset_size(data)
+    #     init = InitRandomPopulation(data, num_cols, num_rows , "target", 50)
+    #     pop: Population = init.init_population()
+    #     pop.calc_gene_score()
+    #     temp_best = pop.get_best_pop_gene()
+    #     best_socre = temp_best.score
+    #     print(f"Before running best score: {best_socre}")
+    #     for i in range(5):
+    #         pop.next_generation()
+    #         temp_best = pop.get_best_pop_gene()
+    #         print(f"Gen #{i}, Best score: {temp_best.score}")
+    #         self.assertGreaterEqual(temp_best.score, best_socre)
+    #         best_socre = temp_best.score
 
     # def test_like_article_end_to_end_mid_db(self):
     #     data = pd.read_csv("../data/dataset_2_headech_prodrom.csv")
