@@ -18,7 +18,12 @@ It comes integrated with functionalities from the popular `AutoSklearn` library,
 - Run another time the automl to finetune the hyper-parameters fot the specific model.
 - Returns the classifier
 
-Installing the SubStrat package
+Very recomended to use venv.
+```bash
+python3 -m venv subsrat_vev
+```
+Installing the SubStrat package.
+
 ```bash
 pip install substart-automl
 ```
@@ -32,6 +37,7 @@ s = SubStrat(dataset=my_dataset, target_col_name='target')
 # Excute SubStrat flow
 cls = s.run()
 ```
+[see basic example here](Examples/Notebooks/basic_example.ipynb)
 
 ## Classes
 
