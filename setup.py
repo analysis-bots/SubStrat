@@ -9,13 +9,13 @@ import os
 
 setup(
     name="substrat-automl",
-    version="0.3",
+    version="0.4",
     description="A Python package for automated machine learning tasks with genetic algorithm-based dataset summarization.",
     long_description=open('README.md').read(),
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     long_description_content_type="text/markdown",
-    url="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME",  # Adjust with your repo URL
+    url="https://github.com/analysis-bots/SubStrat",  # Adjust with your repo URL
     author="Eyal Elboim",
     author_email="Eyal.Elboim1@gmail.com",  
     install_requires=["pandas>=2,<3",
