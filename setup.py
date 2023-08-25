@@ -9,7 +9,7 @@ import os
 
 setup(
     name="substrat-automl",
-    version="0.4",
+    version="0.0.4",
     description="A Python package for automated machine learning tasks with genetic algorithm-based dataset summarization.",
     long_description=open('README.md').read(),
     package_dir={'': 'src'},
@@ -21,9 +21,7 @@ setup(
     install_requires=["pandas>=2,<3",
                     "scipy>=1.10.1,<2",
                     "numpy>=1.25.0,<2",
-                    "scikit-learn",
                     "auto-sklearn==0.15.0",
-                    "sklearn",
                     "tqdm",
                 ],
     python_requires='>=3.8',  
