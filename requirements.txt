@@ -1,7 +1,5 @@
 pandas>=2,<3
 scipy>=1.10.1,<2
 numpy>=1.25.0,<2
-scikit-learn
 auto-sklearn==0.15.0
-sklearn
 tqdm
