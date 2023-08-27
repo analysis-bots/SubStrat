@@ -21,6 +21,8 @@ It comes integrated with functionalities from the popular `AutoSklearn` library,
 Very recomended to use venv.
 ```bash
 python3 -m venv subsrat_vev
+cd subsrat_vev
+sourch bin/activate
 ```
 Installing the SubStrat package.
 
@@ -37,7 +39,8 @@ s = SubStrat(dataset=my_dataset, target_col_name='target')
 # Excute SubStrat flow
 cls = s.run()
 ```
-[see basic example here](Examples/Notebooks/basic_example.ipynb)
+[See basic example here](Examples/Notebooks/basic_example.ipynb)
+[Example in google Colab](https://colab.research.google.com/drive/1AnsUZuiPGvn1bVfV0YuRMkjOKSoUlUQx?usp=sharing)
 
 ## Classes
 
@@ -84,7 +87,7 @@ Implements the genetic algorithm for dataset summarization.
  - Add the option to use more AutoML frameworks, like TPOT.
  - Make SubStrat more configable by the user.
  - Make the UX more friendly.
- - 
+
 
 # Citing information
 Teddy Lazebnik, Amit Somech, and Abraham Itzhak Weinberg. 2022. SubStrat: A Subset-Based Optimization Strategy for Faster AutoML. Proc. VLDB Endow. 16, 4 (December 2022), 772–780. https://doi.org/10.14778/3574245.3574261 

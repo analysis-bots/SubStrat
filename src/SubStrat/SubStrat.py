@@ -63,7 +63,7 @@ class SubStrat:
         print(f"{message} Accuracy score: {accuracy:.4f}")
 
     def run(self) -> AutoSklearnClassifier:
-        print("Starting summary algorithm")
+        print("Starting Gen-DST algorithm")
         subset_dataset:pd.DataFrame = self.summary_algorithm.run()
 
         # Use helper function to split datasets
