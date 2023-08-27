@@ -9,7 +9,7 @@ import os
 
 setup(
     name="substrat-automl",
-    version="0.0.4",
+    version="0.0.5",
     description="A Python package for automated machine learning tasks with genetic algorithm-based dataset summarization.",
     long_description=open('README.md').read(),
     package_dir={'': 'src'},
