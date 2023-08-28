@@ -39,7 +39,7 @@ s = SubStrat(dataset=my_dataset, target_col_name='target')
 # Excute SubStrat flow
 cls = s.run()
 ```
-[See basic example here](Examples/Notebooks/basic_example.ipynb)
+[See basic example here](Examples/Notebooks/basic_example.ipynb)  
 [Example in google Colab](https://colab.research.google.com/drive/1AnsUZuiPGvn1bVfV0YuRMkjOKSoUlUQx?usp=sharing)
 
 ## Classes
