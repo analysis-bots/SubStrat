@@ -3,8 +3,8 @@
 `SubStrat` is a Python package designed to optimize AutoML running times on large datasets.
 It wraps existing AutoML tools such as AutoSklearn, TPOT and H2O, and instead of execute them on directly on the entire dataset, SubStrat uses a genetic-based algorithm to find a small yet representative data subset which preserves a characteristic of the original one. It then employs the AutoML tool on the small subset, and finally, it refines the resulted pipeline by executing a restricted, much shorter, AutoML process on the large dataset.
 
- ** `SubStrat` is still under development, currently supporting `AutoSklearn`. 
-Follow us here for updates. **
+ *** `SubStrat` is still under development, currently supporting `AutoSklearn`. 
+Follow us here for updates. ***
 
 
 `SubStrat`is based on the VLDB 2023 Paper:
@@ -14,18 +14,18 @@ Subset-Based Optimization Strategy for Faster AutoML](https://www.vldb.org/pvldb
 
 ## Features
 
-- **Automated Machine Learning (AutoML)**: Using the power of the `AutoSklearn` library, users can seamlessly train and fine-tune machine learning models on their dataset.
+- **Automated Machine Learning (AutoML)**: Using the power of tools such as `AutoSklearn` library, users can seamlessly train and fine-tune machine learning models on their dataset.
   
-- **Genetic Dataset Summarization**: `SubStrat` includes a genetic algorithm-based approach to summarize datasets, providing concise data representations while retaining vital information.
+- **Genetic Dataset Summarization**: `SubStrat` uses a genetic algorithm for summarizing datasets, providing concise data representations while retaining vital information.
 
 #### SubStrat Flow
-- Run genetic algorithm-based to find sub set dataset that yet represet the full size dataset.
-- On the sub set dataset runs full search of Automl.
-- Extrat the model with the highet score.
-- Run another time the automl to finetune the hyper-parameters fot the specific model.
-- Returns the classifier
+- Run the genDST algorithm for finding a data subset that preserves dataset entropy.
+- Run the AutoML tool on the data subset (fast) and obtain intermediate ML pipeline.
+- Improve the intermediate pipeline by employing a restricted AutoML run on the full dataset.
+- Return the optimized ML pipeline.
 
-Very recomended to use venv.
+#### Installation and Setupt
+Very recomended to use `venv`.
 ```bash
 python3 -m venv subsrat_vev
 cd subsrat_vev
