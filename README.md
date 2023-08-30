@@ -1,4 +1,4 @@
-# SubStrat Package
+# SubStrat Package: A Subset-Based Optimization Strategy for Faster AutoML
 
 `SubStrat` is a Python package designed to optimize AutoML running times on large datasets.
 It wraps existing AutoML tools such as AutoSklearn, TPOT and H2O, and instead of execute them on directly on the entire dataset, SubStrat uses a genetic-based algorithm to find a small yet representative data subset which preserves a characteristic of the original one. It then employs the AutoML tool on the small subset, and finally, it refines the resulted pipeline by executing a restricted, much shorter, AutoML process on the large dataset.
