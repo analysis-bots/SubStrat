@@ -1,7 +1,11 @@
 # SubStrat Package
 
-`SubStrat` is a Python package designed to provide a substrate for automated machine learning tasks. 
-It comes integrated with functionalities from the popular `AutoSklearn` library, and also includes a genetic algorithm-based dataset summarization utility.
+`SubStrat` is a Python package designed to optimize AutoML running times on large datasets.
+It wraps existing AutoML tools such as AutoSklearn, TPOT and H2O, and instead of execute them on directly on the entire dataset, SubStrat uses a genetic-based algorithm to find a small yet representative data subset which preserves a characteristic of the original one. It then employs the AutoML tool on the small subset, and finally, it refines the resulted pipeline by executing a restricted, much shorter, AutoML process on the large dataset.
+
+ ** `SubStrat` is still under development, currently supporting `AutoSklearn`. 
+Follow us here for updates. **
+
 
 `SubStrat`is based on the VLDB 2023 Paper:
 - Teddy Lazebnik, Amit Somech, and Abraham Itzhak Weinberg. [SubStrat: A
